@@ -1,0 +1,10 @@
+name: Pagenavicons
+form: $/jlh/pagenavicons/models/pagenavicon/fields.yaml
+modelClass: Jlh\PageNavIcons\Models\Pagenavicon
+defaultRedirect: jlh/pagenavicons/pagenavicons
+create:
+    redirect: 'jlh/pagenavicons/pagenavicons/update/:id'
+    redirectClose: jlh/pagenavicons/pagenavicons
+update:
+    redirect: jlh/pagenavicons/pagenavicons
+    redirectClose: jlh/pagenavicons/pagenavicons

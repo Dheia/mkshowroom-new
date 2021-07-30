@@ -1,0 +1,48 @@
+description = "Default layout"
+
+[staticMenu mainMenu]
+code = "mainMenu"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[registermerchant]
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/footer.css');
+}
+?>
+==
+{variable name="custom_header" label="Custom Header" tab="Header" type="text"}{/variable}
+{variable name="use_header" label="Use Custom Header" tab="Header" type="switch"}{/variable}
+
+{% partial 'site/head' %}
+
+<body>
+
+{% partial 'site/top' %}
+
+<header class="mb-4 fixed-top">
+	{% partial 'menu-items' items=mainMenu.menuItems class='mr-auto' %}
+</header> 
+
+<div class="container mt-4 mb-4">
+	<div class="row">
+		<div class="col-sm-12">
+			{% if use_header == 1 %}
+			<h1>{{custom_header}}</h1>
+			{% else %}
+			<h1>{{this.page.title}}</h1>
+			{% endif %}
+			{% page %}
+		</div>
+	</div>
+</div>
+
+{% partial 'site/footer' %}
+
+</body>
+</html>

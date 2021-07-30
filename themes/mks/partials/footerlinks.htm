@@ -1,0 +1,43 @@
+description = "Footer Links"
+
+[builderList]
+modelClass = "Jlh\FooterLinks\Models\Footerlink"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsKeyColumn = "link"
+detailsUrlParameter = "link"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
+
+[viewBag]
+snippetCode = "footerlinks"
+snippetName = "Footer Links"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+    {% for record in records %}
+        <div>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                
+                    <a href="{{ record.link }}" target="_blank">
+             
+                {{ attribute(record, displayColumn) }}
+
+              
+                    </a>
+               
+            {% endspaceless %}
+        </div>
+    {% else %}
+        <div class="no-data">{{ noRecordsMessage }}</div>
+    {% endfor %}

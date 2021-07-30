@@ -1,0 +1,4 @@
+title: Markuptypes
+modelClass: Jlh\Userextend\Models\Markuptype
+toolbar:
+    buttons: reorder_toolbar

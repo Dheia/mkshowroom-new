@@ -1,0 +1,45 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    icon:
+        label: Icon
+        span: auto
+        type: awesomeiconslist
+        emptyOption: false
+        placeholder: Select Icon
+    link_type:
+        label: 'Link Type'
+        options:
+            1: 'External Link'
+            2: 'Internal Site Page'
+        span: auto
+        type: radio
+    link:
+        label: Link
+        span: left
+        trigger:
+            action: show
+            field: link_type
+            condition: 'value[1]'
+        type: text
+    pagelink:
+        label: 'Page Link'
+        span: left
+        trigger:
+            action: show
+            field: link_type
+            condition: 'value[2]'
+        type: staticpagepicker
+        placeholder: Select Page
+        emptyOption: false
+    target:
+        label: 'Show in New Window'
+        span: left
+        type: switch
+    is_active:
+        label: Active
+        span: left
+        default: 1
+        type: switch

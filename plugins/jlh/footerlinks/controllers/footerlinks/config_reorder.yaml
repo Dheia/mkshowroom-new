@@ -1,0 +1,4 @@
+title: Footerlinks
+modelClass: Jlh\FooterLinks\Models\Footerlink
+toolbar:
+    buttons: reorder_toolbar

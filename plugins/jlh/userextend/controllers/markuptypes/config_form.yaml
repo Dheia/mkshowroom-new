@@ -1,0 +1,10 @@
+name: Markuptypes
+form: $/jlh/userextend/models/markuptype/fields.yaml
+modelClass: Jlh\Userextend\Models\Markuptype
+defaultRedirect: jlh/userextend/markuptypes
+create:
+    redirect: 'jlh/userextend/markuptypes/update/:id'
+    redirectClose: jlh/userextend/markuptypes
+update:
+    redirect: jlh/userextend/markuptypes
+    redirectClose: jlh/userextend/markuptypes

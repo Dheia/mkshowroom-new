@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    sort_order:
+        label: Order
+        type: number
+        invisible: true
+    target:
+        label: 'New Window'
+        type: inetis-list-switch
+        searchable: true
+        sortable: true
+    is_active:
+        label: Active
+        type: inetis-list-switch
+        searchable: true
+        sortable: true

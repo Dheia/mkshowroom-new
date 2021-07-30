@@ -1,0 +1,5 @@
+title: Homesliders
+modelClass: Jlh\Homeslider\Models\Homeslider
+toolbar:
+    buttons: reorder_toolbar
+nameFrom: image

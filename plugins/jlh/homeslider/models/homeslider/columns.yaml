@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    image:
+        label: Image
+        type: partial
+        searchable: true
+        sortable: true
+        path: ~/plugins/jlh/homeslider/_column_image.htm
+    sort_order:
+        label: Order
+        type: number
+        invisible: true
+    is_active:
+        label: Active
+        type: inetis-list-switch
+        icon: true
+        searchable: true
+        sortable: true

@@ -1,0 +1,39 @@
+description = "Footer"
+==
+
+<!-- Footer -->
+<footer class="page-footer font-small elegant-color pt-4">
+
+	<!-- Footer Links -->
+	<div class="container text-center text-md-left mb-4">
+		<div class="row">
+
+			<div class="col-sm-3">
+				<div class="text-uppercase font-weight-bold text-white-50">links</div>
+				{% partial 'footerlinks' %}
+			</div>
+			
+		</div>
+	</div>
+	<!-- Footer Links -->
+
+	{% partial 'footericons' %}
+
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">© {{"now"|date("Y")}} 
+		Mason Kay. All rights reserved. Site design by <a href="http://www.jumpshotink.com">jumpshot ink</a>.
+	</div>
+	<!-- Copyright -->
+
+</footer>
+<script src="{{ [
+'assets/js/jquery-3.1.1.min.js',
+'assets/js/popper.min.js',
+'assets/js/bootstrap.min.js',
+'assets/js/mdb.min.js',
+'assets/js/scripts.js'
+]|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+

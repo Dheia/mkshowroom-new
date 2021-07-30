@@ -1,0 +1,86 @@
+<div class="card mk-back">
+
+	<div class="card-body p-5">
+
+		<form data-request="registercustomer::onSubmit" data-request-validate data-request-files data-request-flash data-attach-loading data-interval="10" accept-charset="UTF-8" class="register-form">
+
+			<fieldset class="border pl-4 pr-4 mb-4">
+				<legend class="w-auto text-uppercase">Customer Information</legend>
+				<div class="form-row mb-4">
+					<div class="col">
+						<label class="d-none d-sm-block" for="registerUsername">Username (10 digit phone number recommended. No spaces please).<span class="required">*</span></label>
+						<input name="username" type="text" class="form-control" id="registerUsername" placeholder="Enter a username" />
+						<span class="error_message" data-validate-for="username"></span>
+					</div>
+					<div class="col"></div>
+				</div>
+
+				<div class="form-row mb-4">
+					<div class="col">
+						<label class="d-none d-sm-block" for="registerName">First Name<span class="required">*</span></label>
+						<input name="name" type="text" class="form-control" id="registerName" placeholder="Enter your first name" />
+						<span class="error_message" data-validate-for="name"></span>
+					</div>
+					<div class="col">
+						<label class="d-none d-sm-block" for="registerSurname">Last Name<span class="required">*</span></label>
+						<input name="surname" type="text" class="form-control" id="registerSurname" placeholder="Enter your last name" />
+						<span class="error_message" data-validate-for="surname"></span>
+					</div>
+				</div>
+
+				<div class="form-row mb-4">
+					<div class="col form-group">
+						<label class="d-none d-sm-block" for="registerPassword">Password (At least 8 characters)<span class="required">*</span></label>
+						<div class="input-group">
+							<input name="password" type="password" class="form-control input-pw" id="registerPassword" placeholder="Enter a password" />
+							<div class="input-group-append toggle-password"><span class="input-group-text"><i class="pw far fa-eye"></i></span></div>
+							<span class="error_message" data-validate-for="password"></span>
+						</div>
+					</div>
+					<div class="col form-group">
+						<label class="d-none d-sm-block" for="registerPasswordConfirm">Confirm Password (Please retype password)<span class="required">*</span></label>
+						<div class="input-group">
+							<input name="password_confirmation" type="password" class="form-control input-pwc" id="registerPasswordConfirm" placeholder="Confirm password" />
+							<div class="input-group-append toggle-password-c"><span class="input-group-text"><i class="pwc far fa-eye"></i></span></div>
+							<span class="error_message" data-validate-for="password_confirmation"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-row mb-4">
+					<div class="col">
+						<label class="d-none d-sm-block" for="registerEmail">Email<span class="required">*</span></label>
+						<input name="email" type="email" class="form-control" id="registerEmail" placeholder="Enter your email" />
+						<span class="error_message" data-validate-for="email"></span>
+					</div>	
+				</div>
+
+				<div class="form-row mb-4">
+					<div class="col">
+						<!-- Material switch -->
+						<div class="switch">
+							<label class="mb-3" for="is_activated">Activate Customer</label><br>
+							<label>
+								No
+								<input type="checkbox" name="is_activated" id="is_activated" >
+								<span class="lever"></span> Yes
+							</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<input type="hidden" name="store_id" id="store_id" value="{{user.id}}">
+			<input type="hidden" name="store_name" id="store_name" value="{{user.store_name}}">
+
+
+			<div>
+				<button data-attach-loading type="submit" class="btn btn-mk" name="submit" id="submit" style="border:none;">
+					Submit
+				</button>
+			</div>
+
+		</form>
+
+	</div>
+</div>

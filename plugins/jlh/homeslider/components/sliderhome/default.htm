@@ -1,0 +1,66 @@
+{% set carouselhomes = __SELF__.carouselhomes %}
+
+{% set i = 0 %}
+{% set slide = 0 %}
+
+<div id="carouselHome" class="carousel slide carousel-fade animated fadeIn" data-ride="carousel" data-interval="3500" data-pause="none" data-wrap="false">
+
+	<!--Indicators-->
+	<ol class="carousel-indicators">
+		{% for carouselhome in carouselhomes %}
+		<li data-target="#carouselHome" data-slide-to="{{i}}" class="{% if i == 0 %}active{% endif %}"><i class="far fa-circle"></i></li>
+		{% set i = i + 1 %}
+		{% endfor %}
+	</ol>
+	<!--/.Indicators-->
+
+	<div class="carousel-inner" role="listbox">
+		{% for carouselhome in carouselhomes %}
+		
+		<!-- Full Page Intro -->
+		<div class="carousel-item {% if slide == 0 %}active{% endif %}">
+			<div class="view" style="background-image: url('/storage/app/media/{{carouselhome.image}}'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+				<!-- Mask & flexbox options-->
+				<div class="mask homeslider-mask d-flex justify-content-center align-items-center">
+					<!-- Content -->
+					<div class="container">
+						<!--Grid row-->
+						<div class="row">
+							<!--Grid column-->
+							<div class="col-md-12 mb-4 text-center {% if slide == 0 %}animated fadeInDown delay-2s{% endif %}">
+								<h1 class="h1-reponsive text-uppercase font-weight-bold mb-0 pt-md-5 pt-5">
+									<strong>{{header}}<br>{{header2}}</strong>
+								</h1>
+								<hr class="hr-light my-4">
+								{% partial 'login' %}
+
+								<!-- start registration -->
+								<div class="m-5">
+									<a href="/register">
+										<span class="fa-stack" style="vertical-align: top;">
+											<i class="far fa-circle fa-stack-2x"></i>
+											<i class="fas fa-sign-in fa-stack-1x"></i>
+										</span>
+										<h5 class="text-uppercase mt-1"><strong>{{subheader|raw}}</strong></h5>
+									</a>
+								</div>
+								<!-- end registration -->
+							</div>
+
+							<!--Grid column-->
+						</div>
+						<!--Grid row-->
+					</div>
+					<!-- Content -->
+				</div>
+				<!-- Mask & flexbox options-->
+			</div>
+			<!-- Full Page Intro -->
+		</div>
+
+		{% set slide = slide + 1 %}
+		{% endfor %}
+
+	</div>
+
+</div>

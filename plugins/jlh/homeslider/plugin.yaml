@@ -1,0 +1,11 @@
+plugin:
+    name: 'jlh.homeslider::lang.plugin.name'
+    description: 'jlh.homeslider::lang.plugin.description'
+    author: JLH
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'jlh.homeslider::lang.plugin.name'
+        url: jlh/homeslider/homesliders
+        icon: icon-home

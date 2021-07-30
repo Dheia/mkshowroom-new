@@ -1,0 +1,42 @@
+description = "Head"
+
+[SeoStaticPage]
+
+[ScrollTop]
+speedScrollTopLynx = 300
+sizeScrollLynx = 50
+positionScrollLynx = "bottomright"
+UnitScrollLynx = "%"
+horizontalUnitsScrollLynx = 2
+verticalUnitsScrollLynx = 7
+arrowColorScrollLynx = "#fff"
+arrowHoverColorScrollLynx = "#2E2E2E"
+backgroundColorScrollLynx = "#009200"
+backgroundHoverColorScrollLynx = "#E6E6E6"
+==
+<html lang="en">
+<head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="{{ 'assets/img/favicon.ico'|theme }}">
+    
+    {% component 'SeoStaticPage' %}
+    
+    <title>{{ this.page.title }}</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        
+    <link href="{{ [
+        'assets/css/bootstrap.min.css',
+        'assets/css/mdb.min.css',
+        'assets/css/webfontkit/stylesheet.css',
+        'assets/css/style.css',
+        'assets/fontawesome/css/all.css',
+        'assets/css/animated-icon.css'
+    ]|theme }}" rel="stylesheet">
+    
+    {% styles %}
+</head>

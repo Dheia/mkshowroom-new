@@ -1,0 +1,72 @@
+description = "main menu"
+
+[viewBag]
+snippetCode = "menu-items"
+snippetName = "main menu"
+==
+<!-- start Navbar -->
+
+<nav class="navbar navbar-expand-lg justify-content-start flex-nowrap navTop scrolling-navbar p-0">
+	<!-- <a href="/" class="navbar-brand">Top</a> -->
+	<div class="flex-row d-block mx-auto">
+		<div class="logo">
+			<a href="{{url('/')}}"><img src="/storage/app/media/MK-Logo-web.png" class="img-fluid" alt="Mason Kay"></a>
+		</div>
+	</div>
+
+	<button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
+		<div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+	</button>
+
+</nav>
+
+<nav class="navbar navbar-expand-lg elegant-color-dark navBottom text-uppercase">
+	<div class="d-block mx-auto flex-nowrap">
+		<div class="navbar-collapse collapse pt-2 pt-md-0 text-center" id="navbar2">
+
+			<ul class="navbar-nav {{ class }}">
+				
+				{% if user %}
+				<li class="user-nav nav-item">Welcome, {{user.store_name}}</li>
+				{% endif %}
+
+				{% for item in items %}
+				{% if user %}
+				<li class="
+				nav-item
+				{{ item.isActive or item.isChildActive ? 'active' : '' }} 
+				{{ item.items ? 'dropdown' : '' }}
+				">
+				<a
+				class="nav-link {% if item.items %}dropdown-toggle{% endif %}"
+				{% if item.items %}data-toggle="dropdown"{% endif %} 
+				href="{{ item.url }}"
+				>{{ item.title }}</a>
+
+				{% if item.items %}
+				<div class="dropdown-menu">
+					{% for subitem in item.items %}
+					<a class="dropdown-item" href="{{ subitem.url }}">{{ subitem.title }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+
+		<ul class="navbar-nav ml-auto nav-flex-icons">
+			{% if user %}
+			<li class="nav-item">
+				<a href class="nav-link waves-effect waves-light" data-request="onLogout" data-request-data="redirect: '/'">
+					<i class="fas fa-sign-out-alt"></i>
+				</a>
+			</li>
+			{% endif %}
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+<!-- end Navbar -->

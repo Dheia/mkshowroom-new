@@ -1,0 +1,10 @@
+name: Categories
+form: $/jlh/showroom/models/category/fields.yaml
+modelClass: Jlh\Showroom\Models\Category
+defaultRedirect: jlh/showroom/categories
+create:
+    redirect: 'jlh/showroom/categories/update/:id'
+    redirectClose: jlh/showroom/categories
+update:
+    redirect: jlh/showroom/categories
+    redirectClose: jlh/showroom/categories

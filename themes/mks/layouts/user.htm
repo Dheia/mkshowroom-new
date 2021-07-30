@@ -1,0 +1,67 @@
+description = "Layout for logged in users"
+
+[staticMenu mainMenu]
+code = "mainMenu"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[session]
+security = "user"
+allowedUserGroups[] = "customers"
+allowedUserGroups[] = "merchants"
+redirect = "home"
+
+[registercustomer]
+
+[managecustomers]
+results = 0
+sortOrder = "sort_order asc"
+
+[updatecustomer]
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/footer.css');
+}
+?>
+==
+{variable name="custom_header" label="Custom Header" tab="Header" type="text"}{/variable}
+{variable name="use_header" label="Use Custom Header" tab="Header" type="switch"}{/variable}
+
+{% partial 'site/head' %}
+
+<body>
+
+{% partial 'site/top' %}
+
+<header class="mb-4 fixed-top">
+	{% partial 'menu-items' items=mainMenu.menuItems class='mr-auto' %}
+</header> 
+
+<div class="container mt-4 mb-4">
+	<div class="row">
+		<div class="col-sm-12">
+			{% if use_header == 1 %}
+			<h1> {{custom_header}}</h1>
+			{% else %}
+			<h1>{{this.page.title}}</h1>
+			{% endif %}
+			<h2>{% content 'pagetitle' %}</h2>
+
+			{% page %}
+		</div>
+	</div>
+</div>
+
+{% partial 'site/footer' %}
+
+</body>
+</html>

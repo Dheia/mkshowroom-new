@@ -1,0 +1,4 @@
+title: Showrooms
+modelClass: Jlh\Showroom\Models\Showroom
+toolbar:
+    buttons: reorder_toolbar

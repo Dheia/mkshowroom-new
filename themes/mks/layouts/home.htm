@@ -1,0 +1,77 @@
+description = "Home page layout"
+
+[staticMenu mainMenu]
+code = "mainMenu"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticBreadcrumbs]
+
+[RainLab\User\Components\Account account]
+redirect = "showroom"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "all"
+
+[resetPassword]
+paramCode = "code"
+
+[ScrollTop]
+speedScrollTopLynx = 300
+sizeScrollLynx = 50
+positionScrollLynx = "bottomright"
+UnitScrollLynx = "%"
+horizontalUnitsScrollLynx = 2
+verticalUnitsScrollLynx = 7
+arrowColorScrollLynx = "#000"
+arrowHoverColorScrollLynx = "#2E2E2E"
+backgroundColorScrollLynx = "#FFF"
+backgroundHoverColorScrollLynx = "#E6E6E6"
+==
+<?php
+function onStart()
+{
+	$this->addCss('assets/css/home.css');
+}
+?>
+==
+{variable name="header" label="Header" tab="Home Top" type="text"}{/variable}
+{variable name="header2" label="Header 2" tab="Home Top" type="text"}{/variable}
+{variable name="subheader" label="Subheader" tab="Home Top" type="text"}{/variable}
+
+{% partial 'site/head' %}
+
+<body>
+
+{% partial 'site/top' %}
+
+	<header class="z-depth-0 fixed-top">
+		{% partial 'menu-items' items=mainMenu.menuItems class='mr-auto' %}
+		
+		{% if user %}
+		You are already logged in.
+		{% else %}
+		{% partial 'sliderhome' %}
+		{% endif %}
+		
+	</header>
+	<!-- Main navigation -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				{% page %}
+			</div>
+		</div>
+	</div>
+
+
+	{% partial 'site/footer' %}
+
+</body>
+</html>

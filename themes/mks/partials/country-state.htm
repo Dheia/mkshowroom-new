@@ -1,0 +1,33 @@
+description = "Country-State"
+==
+
+{% set countryId = countryId|default(form_value('country_id')) %}
+{% set stateId = stateId|default(form_value('state_id')) %}
+
+    <div class="form-row mb-4">
+
+    <div class="col">
+    <label for="accountCountry">Country<span class="required">*</span></label>
+    {{ form_select_country('country_id', countryId, {
+        id: 'accountCountry',
+        class: 'browser-default custom-select',
+        emptyOption: 'Please select',
+        'data-request': 'onInit',
+        'data-request-update': {
+            'country-state': '#partialCountryState'
+        }
+    }) }}
+    <span class="error_message" data-validate-for="country_id"></span>
+</div>
+
+<div class="col">
+    <label for="accountState">State<span class="required">*</span></label>
+    {{ form_select_state('state_id', countryId, stateId, {
+        id: 'accountState',
+        class: 'browser-default custom-select',
+        emptyOption: 'Please select'
+    }) }}
+    <span class="error_message" data-validate-for="state_id"></span>
+</div>
+
+</div>

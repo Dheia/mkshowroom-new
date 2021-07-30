@@ -1,0 +1,13 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: Import Showroom Products
+    modelClass: Jlh\Showroom\Models\Showroom
+    list: $/jlh/showroom/models/showroom/columns.yaml
+    defaultFormatOptions:
+      delimiter: ';'
+      enclosure: '"'
+      escape: '\'
+      encoding: 'utf-8'

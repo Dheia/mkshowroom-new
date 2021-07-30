@@ -1,0 +1,8 @@
+static-pages:
+    index: {  }
+    manage-customers: {  }
+    customer-form: {  }
+    showroom: {  }
+    account: {  }
+    register: {  }
+    thank-you: {  }

@@ -1,0 +1,4 @@
+title: Pagenavicons
+modelClass: Jlh\PageNavIcons\Models\Pagenavicon
+toolbar:
+    buttons: reorder_toolbar

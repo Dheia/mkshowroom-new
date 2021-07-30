@@ -1,0 +1,57 @@
+{% set managecustomers = __SELF__.managecustomers %}
+
+{% set count = 1 %}
+
+<div class="row mb-3">
+	<div class="col-sm-6">
+		<a href="/customer-form" class="btn btn-mk">New Customer</a>
+	</div>
+	<div class="col-sm-6 userstats">
+		<div><b>Active:</b> {{totalactive}}</div>
+		<div><b>Inactive:</b> {{totalinactive}}</div>
+		<div class="text-uppercase"><b>Total: {{total}}</b></div>
+	</div>
+</div>
+
+<div class="card p-3">
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">id</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Active</th>
+					<th scope="col">Request List</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for managecustomer in managecustomers %}
+				<tr>
+					<th scope="row">{{count}}</th>
+					<td>{{managecustomer.id}}</td>
+					<td>{{managecustomer.name}}</td>
+					<td>{{managecustomer.surname}}</td>
+					<td>{% if managecustomer.is_activated == 0 %}No{% else %}Yes{% endif %}</td>
+					<td></td>
+					<td>
+						<a href="/update-customer/{{managecustomer.id}}" class="material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Edit Customer"><i class="far fa-user-edit mr-4"></i></a>
+						<a 
+						data-request="managecustomers::onDelete" 
+						data-request-data="id:{{managecustomer.id}}" 
+						data-request-confirm="Are you sure?" 
+						data-toggle="tooltip" data-placement="top" title="Delete Customer"
+						class="delete material-tooltip-main">
+						<i class="far fa-user-times"></i>
+					</a>
+
+				</td>
+			</tr>
+			{% set count = count + 1 %}
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</div>

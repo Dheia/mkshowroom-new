@@ -1,0 +1,11 @@
+plugin:
+    name: 'jlh.pagenavicons::lang.plugin.name'
+    description: 'jlh.pagenavicons::lang.plugin.description'
+    author: JLH
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Page Nav Icons'
+        url: jlh/pagenavicons/pagenavicons
+        icon: icon-navicon

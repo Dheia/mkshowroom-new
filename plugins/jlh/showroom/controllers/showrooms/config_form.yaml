@@ -1,0 +1,10 @@
+name: Showrooms
+form: $/jlh/showroom/models/showroom/fields.yaml
+modelClass: Jlh\Showroom\Models\Showroom
+defaultRedirect: jlh/showroom/showrooms
+create:
+    redirect: 'jlh/showroom/showrooms/update/:id'
+    redirectClose: jlh/showroom/showrooms
+update:
+    redirect: jlh/showroom/showrooms
+    redirectClose: jlh/showroom/showrooms

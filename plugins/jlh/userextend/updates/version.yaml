@@ -1,0 +1,24 @@
+1.0.1:
+    - 'Initialize plugin.'
+    - add_new_fields.php
+1.0.2:
+    - 'Add Additional Info'
+    - add_additional_info.php
+1.0.3:
+    - 'Add email group'
+    - add_email_group.php
+1.0.4:
+    - 'Updated new fields'
+    - updated_new_fields.php
+1.0.5:
+    - 'Updated name fields'
+    - updated_name_fields.php
+1.0.6:
+    - 'Add store id'
+    - add_store_id.php
+1.0.7:
+    - 'Created table jlh_userextend_markup_type'
+    - builder_table_create_jlh_userextend_markup_type.php
+1.0.8:
+    - 'Updated table jlh_userextend_markup_type'
+    - builder_table_update_jlh_userextend_markup_type.php

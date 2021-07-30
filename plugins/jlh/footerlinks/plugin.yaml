@@ -1,0 +1,11 @@
+plugin:
+    name: 'jlh.footerlinks::lang.plugin.name'
+    description: 'jlh.footerlinks::lang.plugin.description'
+    author: JLH
+    icon: oc-icon-link
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Footer Links'
+        url: jlh/footerlinks/footerlinks
+        icon: icon-link

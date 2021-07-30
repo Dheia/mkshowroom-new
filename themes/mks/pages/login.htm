@@ -1,0 +1,15 @@
+title = "Login"
+url = "/login"
+layout = "default"
+is_hidden = 0
+role = 0
+permission = 0
+anonymous_only = 0
+logged_only = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+{% component 'account' %}

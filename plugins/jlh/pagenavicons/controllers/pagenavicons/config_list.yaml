@@ -1,0 +1,12 @@
+list: $/jlh/pagenavicons/models/pagenavicon/columns.yaml
+modelClass: Jlh\PageNavIcons\Models\Pagenavicon
+title: Pagenavicons
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'jlh/pagenavicons/pagenavicons/update/:id'

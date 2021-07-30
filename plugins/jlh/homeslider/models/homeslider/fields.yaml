@@ -1,0 +1,12 @@
+fields:
+    image:
+        label: Image
+        mode: image
+        imageWidth: '300'
+        span: auto
+        type: mediafinder
+    is_active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox

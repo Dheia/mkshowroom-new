@@ -1,0 +1,35 @@
+{% set accountinfos = __SELF__.accountinfos %}
+
+
+<div class="card p-3 mb-4">
+	{% for accountinfo in accountinfos %}
+	<dl class="row">
+		<dt class="col-sm-2">Username:</dt>
+		<dd class="col-sm-9">{{accountinfo.username}}</dd>
+		<dt class="col-sm-2">First Name:</dt>
+		<dd class="col-sm-9">{{accountinfo.name}}</dd>
+		<dt class="col-sm-2">Last Name:</dt>
+		<dd class="col-sm-9">{{accountinfo.surname}}</dd>
+		<dt class="col-sm-2">Store:</dt>
+		<dd class="col-sm-9">{{accountinfo.store_name}}</dd>
+		<dt class="col-sm-2">Phone:</dt>
+		<dd class="col-sm-9">{{accountinfo.phone}}</dd>
+		<dt class="col-sm-2">Address:</dt>
+		<dd class="col-sm-9">{{accountinfo.address1}}</dd>
+		{% if accountinfo.address2 %}
+		<dt class="col-sm-2"></dt>
+		<dd class="col-sm-9">{{accountinfo.address2}}</dd>
+		{% endif %}	
+		<dt class="col-sm-2">City</dt>
+		<dd class="col-sm-9">{{accountinfo.city}}</dd>
+		<dt class="col-sm-2">State</dt>
+		<dd class="col-sm-9">{{accountinfo.state.name}}</dd>
+		<dt class="col-sm-2">Zip</dt>
+		<dd class="col-sm-9">{{accountinfo.zip}}</dd>
+		<dt class="col-sm-2">Web Site</dt>
+		<dd class="col-sm-9">{{accountinfo.website}}</dd>
+		<dt class="col-sm-2">JBTID</dt>
+		<dd class="col-sm-9">{{accountinfo.jbtid}}</dd>
+	</dl>
+	{% endfor %}	
+</div>

@@ -1,0 +1,174 @@
+<div class="card mk-back">
+
+	<div class="card-body p-5">
+
+		<!-- <form data-request="onRegister" data-request-validate data-request-flash data-attach-loading data-interval="10" accept-charset="UTF-8" class="register-form"> -->
+			<form data-request="registermerchant::onSubmit" data-request-validate data-request-files data-request-flash data-attach-loading data-interval="10" accept-charset="UTF-8" class="register-form">
+
+				<fieldset class="border pl-4 pr-4 mb-4">
+					<legend class="w-auto text-uppercase">Account Information</legend>
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerUsername">Username (10 digit phone number recommended. No spaces please).<span class="required">*</span></label>
+							<input name="username" type="text" class="form-control" id="registerUsername" placeholder="Enter a username" />
+							<span class="error_message" data-validate-for="username"></span>
+						</div>
+						<div class="col"></div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerName">Completed by First Name<span class="required">*</span></label>
+							<input name="name" type="text" class="form-control" id="registerName" placeholder="Enter your first name" />
+							<span class="error_message" data-validate-for="name"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerSurname">Completed by Last Name<span class="required">*</span></label>
+							<input name="surname" type="text" class="form-control" id="registerSurname" placeholder="Enter your last name" />
+							<span class="error_message" data-validate-for="surname"></span>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col form-group">
+							<label class="d-none d-sm-block" for="registerPassword">Password (At least 8 characters)<span class="required">*</span></label>
+							<div class="input-group">
+								<input name="password" type="password" class="form-control input-pw" id="registerPassword" placeholder="Enter a password" />
+								<div class="input-group-append toggle-password"><span class="input-group-text"><i class="pw far fa-eye"></i></span></div>
+								<span class="error_message" data-validate-for="password"></span>
+							</div>
+						</div>
+						<div class="col form-group">
+							<label class="d-none d-sm-block" for="registerPasswordConfirm">Confirm Password (Please retype password)<span class="required">*</span></label>
+							<div class="input-group">
+								<input name="password_confirmation" type="password" class="form-control input-pwc" id="registerPasswordConfirm" placeholder="Confirm password" />
+								<div class="input-group-append toggle-password-c"><span class="input-group-text"><i class="pwc far fa-eye"></i></span></div>
+								<span class="error_message" data-validate-for="password_confirmation"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerEmail">Email<span class="required">*</span></label>
+							<input name="email" type="email" class="form-control" id="registerEmail" placeholder="Enter your email" />
+							<span class="error_message" data-validate-for="email"></span>
+						</div>	
+						<div class="col">
+							<!-- Material switch -->
+							<div class="switch">
+								<label class="mb-3" for="email_group">Please add me to the MK email group</label><br>
+								<label>
+									No
+									<input type="checkbox" name="email_group" id="email_group" value="1" checked>
+									<span class="lever"></span> Yes
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+
+				<fieldset class="border pl-4 pr-4 mb-4">
+					<legend class="w-auto text-uppercase">Store Information</legend>
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="store_name">Store<span class="required">*</span></label>
+							<input name="store_name" type="store_name" class="form-control" id="store_name" placeholder="Enter your Store Name" />
+							<span class="error_message" data-validate-for="store_name"></span>
+						</div>
+						<div class="col"></div>
+					</div>			
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="owner_first_name">Owner First Name</label>
+							<input name="owner_first_name" type="text" class="form-control" id="owner_first_name" placeholder="Enter your first name" />
+							<span class="error_message" data-validate-for="owner_first_name"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="owner_last_name">Owner Last Name</label>
+							<input name="owner_last_name" type="text" class="form-control" id="owner_last_name" placeholder="Enter your last name" />
+							<span class="error_message" data-validate-for="owner_last_name"></span>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerPhone">Phone<span class="required">*</span></label>
+							<input name="phone" type="text" class="form-control" id="registerPhone" placeholder="Enter your phone" />
+							<span class="error_message" data-validate-for="phone"></span>
+						</div>
+						<div class="col"></div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="address1">Address<span class="required">*</span></label>
+							<input name="address1" type="text" class="form-control" id="address1" placeholder="Enter your address" />
+							<span class="error_message" data-validate-for="address1"></span>
+						</div>
+						<div class="col"></div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="address1">Address (line 2)</label>
+							<input name="address2" type="text" class="form-control" id="address2" placeholder="Enter your address" />
+							<span class="error_message" data-validate-for="address2"></span>
+						</div>
+						<div class="col"></div>
+					</div>
+
+					<div id="partialCountryState">
+						{% partial 'country-state' countryId=user.country_id stateId=user.state_id %}
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="city"><span class="required">*</span>City</label>
+							<input name="city" type="text" class="form-control" id="city" placeholder="Enter your city" />
+							<span class="error_message" data-validate-for="city"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="zip"><span class="required">*</span>Zip Code</label>
+							<input name="zip" type="text" class="form-control" id="zip" placeholder="Enter your zip code" />
+							<span class="error_message" data-validate-for="zip"></span>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="website">Website</label>
+							<input name="website" type="text" class="form-control" id="website" placeholder="Enter your Website URL" />
+							<span class="error_message" data-validate-for="website"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="jbtid">JBT ID</label>
+							<input name="jbtid" type="text" class="form-control" id="jbtid" placeholder="JBT ID" />
+							<span class="error_message" data-validate-for="jbtid"></span>
+						</div>
+					</div>
+
+				</fieldset>
+
+
+				<fieldset class="border pl-4 pr-4 mb-4">
+					<legend class="w-auto text-uppercase">Additional Information</legend>
+					<div class="form-row mb-4">
+						<!-- <label class="d-none d-sm-block" for="message">Message</label> -->
+						<textarea name="additional_info" class="form-control" rows="5"></textarea>
+					</div>
+				</fieldset>
+
+
+				<div>
+					<button data-attach-loading type="submit" class="btn btn-mk" name="submit" id="submit" style="border:none;">
+						Submit
+					</button>
+				</div>
+
+			</form>
+
+		</div>
+	</div>

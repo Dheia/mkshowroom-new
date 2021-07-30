@@ -1,0 +1,10 @@
+name: Footerlinks
+form: $/jlh/footerlinks/models/footerlink/fields.yaml
+modelClass: Jlh\FooterLinks\Models\Footerlink
+defaultRedirect: jlh/footerlinks/footerlinks
+create:
+    redirect: 'jlh/footerlinks/footerlinks/update/:id'
+    redirectClose: jlh/footerlinks/footerlinks
+update:
+    redirect: jlh/footerlinks/footerlinks
+    redirectClose: jlh/footerlinks/footerlinks

@@ -1,0 +1,16 @@
+columns:
+    id_shw:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    stylekey:
+        label: 'Style Key'
+        type: text
+        searchable: true
+        sortable: true
+    upc:
+        label: UPC
+        type: number
+        searchable: true
+        sortable: true

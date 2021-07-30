@@ -1,0 +1,24 @@
+plugin:
+    name: 'jlh.showroom::lang.plugin.name'
+    description: 'jlh.showroom::lang.plugin.description'
+    author: JLH
+    icon: oc-icon-diamond
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Showroom
+        url: jlh/showroom/categories
+        icon: icon-diamond
+        sideMenu:
+            side-menu-item3:
+                label: Category
+                url: jlh/showroom/categories
+                icon: icon-sitemap
+            side-menu-item2:
+                label: 'jlh.showroom::lang.plugin.name'
+                url: jlh/showroom/showrooms
+                icon: icon-diamond
+            side-menu-item:
+                label: 'Upload Products'
+                url: jlh/showroom/showrooms
+                icon: icon-upload

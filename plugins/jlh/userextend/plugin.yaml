@@ -1,0 +1,11 @@
+plugin:
+    name: 'jlh.userextend::lang.plugin.name'
+    description: 'jlh.userextend::lang.plugin.description'
+    author: JLH
+    icon: oc-icon-user-plus
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Markup Type'
+        url: jlh/userextend/markuptypes
+        icon: icon-th-large

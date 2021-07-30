@@ -1,0 +1,21 @@
+{% set categories = __SELF__.categories %}
+
+<div class="row">
+	{% for category in categories %}
+	<div class="col-md-3 col-sm-4">
+		<div class="card mb-4">
+			<div class="view overlay">
+				<img src="/storage/app/media/{{category.image_cat}}" class="card-img-top" alt="{{category.name_description}}">
+				<a href="">
+					<div class="mask rgba-white-slight"></div>
+				</a>
+			</div>
+			<div class="card-footer">
+				<h4 class="card-title text-center">
+					{{category.name_description}}
+				</h4>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

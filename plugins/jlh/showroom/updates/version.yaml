@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table jlh_showroom_category'
+    - builder_table_create_jlh_showroom_category.php
+1.0.3:
+    - 'Updated table jlh_showroom_category'
+    - builder_table_update_jlh_showroom_category.php
+1.0.4:
+    - 'Updated table jlh_showroom_category'
+    - builder_table_update_jlh_showroom_category_2.php
+1.0.5:
+    - 'Created table jlh_showroom_'
+    - builder_table_create_jlh_showroom_.php
+1.0.6:
+    - 'Updated table jlh_showroom_'
+    - builder_table_update_jlh_showroom_.php
+1.0.7:
+    - 'Updated table jlh_showroom_'
+    - builder_table_update_jlh_showroom__2.php
+1.0.8:
+    - 'Updated table jlh_showroom_'
+    - builder_table_update_jlh_showroom__3.php
+1.0.9:
+    - 'Updated table jlh_showroom_'
+    - builder_table_update_jlh_showroom4.php

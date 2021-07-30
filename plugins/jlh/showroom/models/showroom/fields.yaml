@@ -1,0 +1,9 @@
+fields:
+    stylekey:
+        label: 'Style Key'
+        span: auto
+        type: text
+    upc:
+        label: UPC
+        span: auto
+        type: text

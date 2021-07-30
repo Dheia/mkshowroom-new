@@ -1,0 +1,10 @@
+name: Homesliders
+form: $/jlh/homeslider/models/homeslider/fields.yaml
+modelClass: Jlh\Homeslider\Models\Homeslider
+defaultRedirect: jlh/homeslider/homesliders
+create:
+    redirect: 'jlh/homeslider/homesliders/update/:id'
+    redirectClose: jlh/homeslider/homesliders
+update:
+    redirect: jlh/homeslider/homesliders
+    redirectClose: jlh/homeslider/homesliders

@@ -1,0 +1,26 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    name_description:
+        label: 'Name Description'
+        span: auto
+        type: text
+    image_cat:
+        label: 'Category Image'
+        mode: image
+        imageWidth: '300'
+        span: auto
+        type: mediafinder
+    header_image_cat:
+        label: 'Header Image'
+        mode: image
+        imageWidth: '300'
+        span: left
+        type: mediafinder
+    is_active:
+        label: Active
+        span: left
+        default: 1
+        type: switch

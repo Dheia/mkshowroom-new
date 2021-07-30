@@ -1,0 +1,83 @@
+<div class="card mk-back">
+
+	<div class="card-body p-5">
+
+		{% set currentusers = __SELF__.currentusers %}
+
+		{% for currentuser in currentusers %}
+		<h2>Editing: {{currentuser.name}}</h2>
+		<!-- <form data-request="onRegister" data-request-validate data-request-flash data-attach-loading data-interval="10" accept-charset="UTF-8" class="register-form"> -->
+			<form data-request="updatecustomer::onSubmit" data-request-validate data-request-files data-request-flash data-attach-loading data-interval="10" accept-charset="UTF-8" class="register-form">
+
+				<fieldset class="border pl-4 pr-4 mb-4">
+					<legend class="w-auto text-uppercase">Customer Information</legend>
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerUsername">Username (10 digit phone number recommended. No spaces please).<span class="required">*</span></label>
+							<input name="username" type="text" class="form-control" id="registerUsername" placeholder="Enter a username" value="{{currentuser.username}}" />
+							<span class="error_message" data-validate-for="username"></span>
+						</div>
+						<div class="col"></div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerName">First Name<span class="required">*</span></label>
+							<input name="name" type="text" class="form-control" id="registerName" placeholder="Enter your first name" value="{{currentuser.name}}" />
+							<span class="error_message" data-validate-for="name"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerSurname">Last Name<span class="required">*</span></label>
+							<input name="surname" type="text" class="form-control" id="registerSurname" placeholder="Enter your last name" value="{{currentuser.surname}}" />
+							<span class="error_message" data-validate-for="surname"></span>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerPassword">Password (At least 8 characters)<span class="required">*</span></label>
+							<input name="password" type="password" class="form-control" id="registerPassword" placeholder="Enter a password" value="{{currentuser.password}}" />
+							<span class="error_message" data-validate-for="password"></span>
+						</div>
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerPasswordConfirm">Confirm Password (Please retype password)<span class="required">*</span></label>
+							<input name="password_confirmation" type="password" class="form-control" id="registerPasswordConfirm" placeholder="Confirm password" value="{{currentuser.password}}" />
+							<span class="error_message" data-validate-for="password_confirmation"></span>
+						</div>
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<label class="d-none d-sm-block" for="registerEmail">Email<span class="required">*</span></label>
+							<input name="email" type="email" class="form-control" id="registerEmail" placeholder="Enter your email" value="{{currentuser.email}}" />
+							<span class="error_message" data-validate-for="email"></span>
+						</div>	
+					</div>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<!-- Material switch -->
+							<div class="switch">
+								<label class="mb-3" for="is_activated">Activate Customer</label><br>
+								<label>
+									No
+									<input type="checkbox" name="is_activated" id="is_activated" {% if currentuser.is_activated == 1 %}checked value="1"{% endif %}>
+									<span class="lever"></span> Yes
+								</label>
+								Status: {{currentuser.is_activated}}
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<div>
+					<button data-attach-loading type="submit" class="btn btn-mk" name="submit" id="submit" style="border:none;">
+						Submit
+					</button>
+				</div>
+
+			</form>
+
+			{% endfor %}
+		</div>
+	</div>
